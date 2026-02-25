@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sales Tax / VAT Calculator</title>
+  <meta name="description" content="Quick tax math: add tax, remove tax, and tax amount." />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" type="image/png" href="assets/Fast_logo.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <button class="hamburger" type="button" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="topbar-sep" aria-hidden="true"></div>
+      <a class="topbar-site" href="index.html" aria-label="FastCalculators home"><img class="topbar-logo" src="assets/FastCalculator.png" alt="FastCalculators" /></a>
+    </div>
+
+    <nav class="topbar-right" aria-label="Calculator pages">
+            <div class="topbar-group" role="list">
+<a class="topbar-btn" href="index.html">Percentage</a>
+      <a class="topbar-btn" href="discount.html">Discount</a>
+      <a class="topbar-btn" href="tax.html">Sales Tax / VAT</a>
+      <a class="topbar-btn" href="tip.html">Tip</a>
+      <a class="topbar-btn" href="loan.html">Loan Payment</a>
+      <a class="topbar-btn" href="margin.html">Margin / Markup</a>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="drawer-backdrop" data-drawer-backdrop></div>
+
+<aside class="drawer" id="drawer" aria-label="Site menu" aria-hidden="true">
+  <div class="drawer-head">
+    <div class="drawer-title">Menu</div>
+    <button class="drawer-close" type="button" aria-label="Close menu">✕</button>
+  </div>
+
+  <nav class="drawer-nav" aria-label="Calculators">
+    <a class="drawer-item" href="index.html">Percentage</a>
+    <a class="drawer-item" href="discount.html">Discount</a>
+    <a class="drawer-item" href="tax.html">Sales Tax / VAT</a>
+    <a class="drawer-item" href="tip.html">Tip</a>
+    <a class="drawer-item" href="loan.html">Loan Payment</a>
+    <a class="drawer-item" href="margin.html">Margin / Markup</a>
+  </nav>
+
+  <div class="drawer-foot" aria-label="Legal">
+    <a class="drawer-link" href="privacy.html">Privacy</a>
+    <a class="drawer-link" href="terms.html">Terms</a>
+  </div>
+</aside>
+
+<div class="container">
+  <header>
+    <div class="brand">
+      <div>
+        <h1>Sales Tax / VAT Calculator</h1>
+      </div>
+    </div>
+    <p class="sub">Quick tax math: add tax, remove tax, and tax amount.</p>
+
+  </header>
+
+  <main class="calc-main">
+
+    <section class="calc-row" id="calc-tax-add">
+      <form autocomplete="off">
+        <div class="qa">
+          <div class="qline">
+            <span class="qa-tag" aria-hidden="true">Q</span>
+            <span class="dim">What is the total if the amount is</span>
+            <input class="num medium" inputmode="decimal" data-in aria-label="Amount" />
+            <span class="dim">and tax is</span>
+            <input class="num small" inputmode="decimal" data-in aria-label="Tax percent" />
+            <span class="dim">% ?</span>
+          </div>
+
+          <div class="aline">
+            <span class="qa-tag a" aria-hidden="true">A</span>
+            <span class="dim">Total with tax</span>
+            <input class="out" readonly data-out aria-label="Total with tax" />
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section class="calc-row" id="calc-tax-remove">
+      <form autocomplete="off">
+        <div class="qa">
+          <div class="qline">
+            <span class="qa-tag" aria-hidden="true">Q</span>
+            <span class="dim">What is the price before tax if the total is</span>
+            <input class="num medium" inputmode="decimal" data-in aria-label="Total" />
+            <span class="dim">and tax is</span>
+            <input class="num small" inputmode="decimal" data-in aria-label="Tax percent" />
+            <span class="dim">% ?</span>
+          </div>
+
+          <div class="aline">
+            <span class="qa-tag a" aria-hidden="true">A</span>
+            <span class="dim">Before tax</span>
+            <input class="out" readonly data-out aria-label="Before tax" />
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section class="calc-row" id="calc-tax-only">
+      <form autocomplete="off">
+        <div class="qa">
+          <div class="qline">
+            <span class="qa-tag" aria-hidden="true">Q</span>
+            <span class="dim">How much tax is added if the amount is</span>
+            <input class="num medium" inputmode="decimal" data-in aria-label="Amount" />
+            <span class="dim">and tax is</span>
+            <input class="num small" inputmode="decimal" data-in aria-label="Tax percent" />
+            <span class="dim">% ?</span>
+          </div>
+
+          <div class="aline">
+            <span class="qa-tag a" aria-hidden="true">A</span>
+            <span class="dim">Tax amount</span>
+            <input class="out" readonly data-out aria-label="Tax amount" />
+          </div>
+        </div>
+      </form>
+    </section>
+
+  </main>
+</div>
+
+<div class="bottom-strip">
+  <div class="container">
+    <section class="tool-info" aria-label="About this calculator">
+          <h2>What is Sales Tax / VAT Calculator?</h2>
+          <p>The Sales Tax / VAT Calculator helps you add or remove a tax percentage from a price, and also tells you how much tax is included.</p>
+          <p>It’s useful for VAT‑inclusive pricing, invoices, checkout totals, and quickly verifying tax calculations.</p>
+          <h3>What it can calculate</h3>
+          <ul>
+            <li><strong>Add tax</strong> - computes the total price after adding tax.</li>
+            <li><strong>Remove tax</strong> - extracts the pre‑tax price from a tax‑inclusive total.</li>
+            <li><strong>Tax amount</strong> - calculates the tax portion for a given pre‑tax amount.</li>
+          </ul>
+          <h3>Notes & tips</h3>
+          <ul>
+            <li>Enter the tax rate as a percent (e.g., 7 for 7%).</li>
+            <li>“Remove tax” assumes the total already includes tax at the given rate.</li>
+            <li>If the tax rate is 0%, totals and pre‑tax amounts are identical.</li>
+          </ul>
+        </section>
+
+        <section class="tool-faq" aria-label="Frequently asked questions">
+    <h2>FAQ</h2>
+    <div class="faq-list">
+    <details class="faq-item">
+    <summary>What’s the difference between Sales Tax and VAT?</summary>
+    <div class="faq-answer">
+    <p>Both are percentage-based taxes on purchases. <strong>Sales tax</strong> is often added at checkout, while <strong>VAT</strong> is commonly shown as already included in the displayed price.</p>
+    <p>This calculator works the same way for both: add a percent to get the total, or remove a percent to get the pre‑tax price.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>How do you remove tax from a tax‑inclusive total?</summary>
+    <div class="faq-answer">
+    <p>Pre‑tax price = <strong>total ÷ (1 + tax/100)</strong>.</p>
+    <p>Example: total 107 with 7% tax → 107 ÷ 1.07 = 100.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>How can I find the tax portion inside a tax‑inclusive total?</summary>
+    <div class="faq-answer">
+    <p>First compute the pre‑tax price using “Remove tax”, then subtract it from the total.</p>
+    <p>Tax portion = <strong>total − (total ÷ (1 + tax/100))</strong>.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>What if there are multiple taxes (state + local, GST + PST, etc.)?</summary>
+    <div class="faq-answer">
+    <p>If the taxes are simply added together, you can usually combine them into one rate (e.g., 5% + 2% = 7%).</p>
+    <p>If they apply sequentially (rare), you’d multiply the factors: (1+tax1)×(1+tax2).</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>Why do invoices sometimes differ by a few cents?</summary>
+    <div class="faq-answer">
+    <p>Rounding rules vary. Some systems calculate tax per line item and round each line, then sum. Others sum first, then calculate tax once.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>Does the calculator include fees, tips, or shipping?</summary>
+    <div class="faq-answer">
+    <p>No. It applies only a percentage tax to the amount you enter. If your checkout includes fees or shipping that are taxable, include them in the amount.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>Should tip be calculated before or after tax?</summary>
+    <div class="faq-answer">
+    <p>It depends on local custom and venue policy. If you want to tip on the tax‑inclusive total, calculate “Total with tax” here, then use that number in the Tip Calculator.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>What if the tax rate is 0%?</summary>
+    <div class="faq-answer">
+    <p>If the tax rate is 0%, the total and pre‑tax amounts are the same, and the tax amount is 0.</p>
+    </div>
+    </details>
+    </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+            <small>© <span id="year"></span> fastcalculators.app</small>
+            <small><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></small>
+          </div>
+    </div>
+  </footer>
+</div>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Loan Payment Calculator</title>
+  <meta name="description" content="Estimate monthly payment, total paid, and total interest." />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" type="image/png" href="assets/Fast_logo.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <button class="hamburger" type="button" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="topbar-sep" aria-hidden="true"></div>
+      <a class="topbar-site" href="index.html" aria-label="FastCalculators home"><img class="topbar-logo" src="assets/FastCalculator.png" alt="FastCalculators" /></a>
+    </div>
+
+    <nav class="topbar-right" aria-label="Calculator pages">
+            <div class="topbar-group" role="list">
+<a class="topbar-btn" href="index.html">Percentage</a>
+      <a class="topbar-btn" href="discount.html">Discount</a>
+      <a class="topbar-btn" href="tax.html">Sales Tax / VAT</a>
+      <a class="topbar-btn" href="tip.html">Tip</a>
+      <a class="topbar-btn" href="loan.html">Loan Payment</a>
+      <a class="topbar-btn" href="margin.html">Margin / Markup</a>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="drawer-backdrop" data-drawer-backdrop></div>
+
+<aside class="drawer" id="drawer" aria-label="Site menu" aria-hidden="true">
+  <div class="drawer-head">
+    <div class="drawer-title">Menu</div>
+    <button class="drawer-close" type="button" aria-label="Close menu">✕</button>
+  </div>
+
+  <nav class="drawer-nav" aria-label="Calculators">
+    <a class="drawer-item" href="index.html">Percentage</a>
+    <a class="drawer-item" href="discount.html">Discount</a>
+    <a class="drawer-item" href="tax.html">Sales Tax / VAT</a>
+    <a class="drawer-item" href="tip.html">Tip</a>
+    <a class="drawer-item" href="loan.html">Loan Payment</a>
+    <a class="drawer-item" href="margin.html">Margin / Markup</a>
+  </nav>
+
+  <div class="drawer-foot" aria-label="Legal">
+    <a class="drawer-link" href="privacy.html">Privacy</a>
+    <a class="drawer-link" href="terms.html">Terms</a>
+  </div>
+</aside>
+
+<div class="container">
+  <header>
+    <div class="brand">
+      <div>
+        <h1>Loan Payment Calculator</h1>
+      </div>
+    </div>
+    <p class="sub">Estimate monthly payment, total paid, and total interest.</p>
+
+  </header>
+
+  <main class="calc-main">
+
+    <section class="calc-row" id="calc-loan">
+      <form autocomplete="off">
+        <div class="qa">
+          <div class="qline">
+            <span class="qa-tag" aria-hidden="true">Q</span>
+            <span class="dim">Loan</span>
+            <input class="num medium" inputmode="decimal" data-in aria-label="Principal" />
+            <span class="dim">at</span>
+            <input class="num small" inputmode="decimal" data-in aria-label="Annual interest rate" />
+            <span class="dim">% APR for</span>
+            <input class="num small" inputmode="decimal" data-in aria-label="Months" />
+            <span class="dim">months - what are the payments?</span>
+          </div>
+
+          <div class="aline">
+            <span class="qa-tag a" aria-hidden="true">A</span>
+            <span class="dim">Monthly payment</span>
+            <input class="out" readonly data-out aria-label="Monthly payment" />
+          </div>
+
+          <div class="aline">
+            <span class="qa-tag a" aria-hidden="true">A</span>
+            <span class="dim">Total paid</span>
+            <input class="out" readonly data-out aria-label="Total paid" />
+          </div>
+
+          <div class="aline">
+            <span class="qa-tag a" aria-hidden="true">A</span>
+            <span class="dim">Total interest</span>
+            <input class="out" readonly data-out aria-label="Total interest" />
+          </div>
+        </div>
+      </form>
+    </section>
+
+  </main>
+</div>
+
+<div class="bottom-strip">
+  <div class="container">
+    <section class="tool-info" aria-label="About this calculator">
+          <h2>What is Loan Payment Calculator?</h2>
+          <p>The Loan Payment Calculator estimates monthly payments for a fixed‑rate loan, plus the total paid and total interest over the loan term.</p>
+          <p>It’s useful for mortgages, car loans, personal loans, and quickly comparing different APRs or terms.</p>
+          <h3>What it can calculate</h3>
+          <ul>
+            <li><strong>Monthly payment</strong> - the standard amortized monthly payment.</li>
+            <li><strong>Total paid</strong> - monthly payment multiplied by the number of months.</li>
+            <li><strong>Total interest</strong> - total paid minus the original principal.</li>
+          </ul>
+          <h3>Notes & tips</h3>
+          <ul>
+            <li>APR is treated as a yearly percent rate and converted to a monthly rate.</li>
+            <li>If APR is 0%, the monthly payment is simply principal ÷ months.</li>
+            <li>This calculator assumes a fixed rate and regular monthly payments (no extra payments or fees).</li>
+          </ul>
+        </section>
+
+        <section class="tool-faq" aria-label="Frequently asked questions">
+    <h2>FAQ</h2>
+    <div class="faq-list">
+    <details class="faq-item">
+    <summary>What does APR mean in this calculator?</summary>
+    <div class="faq-answer">
+    <p>APR is the yearly interest rate expressed as a percent. This calculator converts it to a monthly rate (APR ÷ 12) and uses standard fixed‑payment amortization.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>Why is the monthly payment higher than principal ÷ months?</summary>
+    <div class="faq-answer">
+    <p>Because each payment includes <strong>interest</strong> plus principal. Early payments are mostly interest, and later payments are mostly principal.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>How do I enter the loan term?</summary>
+    <div class="faq-answer">
+    <p>Enter the total number of <strong>months</strong> you will pay. For example: 3 years = 36 months, 5 years = 60 months, 30 years = 360 months.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>Does this include fees, insurance, escrow, or taxes?</summary>
+    <div class="faq-answer">
+    <p>No. It only models principal + interest for a fixed rate. If your payment includes fees or insurance, add those on top of the monthly payment.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>What if the APR is 0%?</summary>
+    <div class="faq-answer">
+    <p>If APR is 0%, the payment is simply <strong>principal ÷ months</strong>, and total interest is 0.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>How do extra payments affect the loan?</summary>
+    <div class="faq-answer">
+    <p>Extra payments reduce the principal faster, which usually reduces total interest and can shorten the loan term. This calculator does not simulate extra payments, so treat results as a baseline.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>Why does total interest grow a lot with longer terms?</summary>
+    <div class="faq-answer">
+    <p>With more months, you pay interest over a longer time, even though the monthly payment is lower. Comparing different terms is a good way to see the trade‑off between payment size and total cost.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>How accurate is this compared to a bank quote?</summary>
+    <div class="faq-answer">
+    <p>Banks may use slightly different compounding conventions and include fees in the APR. Your exact payment can differ, but this tool is accurate for standard fixed‑rate amortized loans.</p>
+    </div>
+    </details>
+    </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+            <small>© <span id="year"></span> fastcalculators.app</small>
+            <small><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></small>
+          </div>
+    </div>
+  </footer>
+</div>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

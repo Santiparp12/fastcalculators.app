@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Margin / Markup Calculator</title>
+  <meta name="description" content="Quick business math: margin, markup, and selling price." />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" type="image/png" href="assets/Fast_logo.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <button class="hamburger" type="button" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="topbar-sep" aria-hidden="true"></div>
+      <a class="topbar-site" href="index.html" aria-label="FastCalculators home"><img class="topbar-logo" src="assets/FastCalculator.png" alt="FastCalculators" /></a>
+    </div>
+
+    <nav class="topbar-right" aria-label="Calculator pages">
+            <div class="topbar-group" role="list">
+<a class="topbar-btn" href="index.html">Percentage</a>
+      <a class="topbar-btn" href="discount.html">Discount</a>
+      <a class="topbar-btn" href="tax.html">Sales Tax / VAT</a>
+      <a class="topbar-btn" href="tip.html">Tip</a>
+      <a class="topbar-btn" href="loan.html">Loan Payment</a>
+      <a class="topbar-btn" href="margin.html">Margin / Markup</a>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="drawer-backdrop" data-drawer-backdrop></div>
+
+<aside class="drawer" id="drawer" aria-label="Site menu" aria-hidden="true">
+  <div class="drawer-head">
+    <div class="drawer-title">Menu</div>
+    <button class="drawer-close" type="button" aria-label="Close menu">✕</button>
+  </div>
+
+  <nav class="drawer-nav" aria-label="Calculators">
+    <a class="drawer-item" href="index.html">Percentage</a>
+    <a class="drawer-item" href="discount.html">Discount</a>
+    <a class="drawer-item" href="tax.html">Sales Tax / VAT</a>
+    <a class="drawer-item" href="tip.html">Tip</a>
+    <a class="drawer-item" href="loan.html">Loan Payment</a>
+    <a class="drawer-item" href="margin.html">Margin / Markup</a>
+  </nav>
+
+  <div class="drawer-foot" aria-label="Legal">
+    <a class="drawer-link" href="privacy.html">Privacy</a>
+    <a class="drawer-link" href="terms.html">Terms</a>
+  </div>
+</aside>
+
+<div class="container">
+  <header>
+    <div class="brand">
+      <div>
+        <h1>Margin / Markup Calculator</h1>
+      </div>
+    </div>
+    <p class="sub">Quick business math: margin, markup, and selling price.</p>
+
+  </header>
+
+  <main class="calc-main">
+
+    <section class="calc-row" id="calc-margin-from-costsell">
+      <form autocomplete="off">
+        <div class="qa">
+          <div class="qline">
+            <span class="qa-tag" aria-hidden="true">Q</span>
+            <span class="dim">If cost is</span>
+            <input class="num medium" inputmode="decimal" data-in aria-label="Cost" />
+            <span class="dim">and selling price is</span>
+            <input class="num medium" inputmode="decimal" data-in aria-label="Selling price" />
+            <span class="dim">, what's the margin and markup?</span>
+          </div>
+
+          <div class="aline">
+            <span class="qa-tag a" aria-hidden="true">A</span>
+            <span class="dim">Margin</span>
+            <div class="outwrap">
+              <input class="out" readonly data-out aria-label="Margin percent" />
+              <span class="suffix">%</span>
+            </div>
+          </div>
+
+          <div class="aline">
+            <span class="qa-tag a" aria-hidden="true">A</span>
+            <span class="dim">Markup</span>
+            <div class="outwrap">
+              <input class="out" readonly data-out aria-label="Markup percent" />
+              <span class="suffix">%</span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section class="calc-row" id="calc-margin-sell-from-markup">
+      <form autocomplete="off">
+        <div class="qa">
+          <div class="qline">
+            <span class="qa-tag" aria-hidden="true">Q</span>
+            <span class="dim">If cost is</span>
+            <input class="num medium" inputmode="decimal" data-in aria-label="Cost" />
+            <span class="dim">and markup is</span>
+            <input class="num small" inputmode="decimal" data-in aria-label="Markup percent" />
+            <span class="dim">%, what selling price?</span>
+          </div>
+
+          <div class="aline">
+            <span class="qa-tag a" aria-hidden="true">A</span>
+            <span class="dim">Selling price</span>
+            <input class="out" readonly data-out aria-label="Selling price" />
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section class="calc-row" id="calc-margin-sell-from-margin">
+      <form autocomplete="off">
+        <div class="qa">
+          <div class="qline">
+            <span class="qa-tag" aria-hidden="true">Q</span>
+            <span class="dim">If cost is</span>
+            <input class="num medium" inputmode="decimal" data-in aria-label="Cost" />
+            <span class="dim">and margin is</span>
+            <input class="num small" inputmode="decimal" data-in aria-label="Margin percent" />
+            <span class="dim">%, what selling price?</span>
+          </div>
+
+          <div class="aline">
+            <span class="qa-tag a" aria-hidden="true">A</span>
+            <span class="dim">Selling price</span>
+            <input class="out" readonly data-out aria-label="Selling price" />
+          </div>
+        </div>
+      </form>
+    </section>
+
+  </main>
+</div>
+
+<div class="bottom-strip">
+  <div class="container">
+    <section class="tool-info" aria-label="About this calculator">
+          <h2>What is Margin / Markup Calculator?</h2>
+          <p>The Margin / Markup Calculator helps you price products by converting between cost, selling price, profit margin, and markup.</p>
+          <p>It’s useful for retail pricing, e‑commerce, invoicing, and ensuring your selling price matches your target margin.</p>
+          <h3>What it can calculate</h3>
+          <ul>
+            <li><strong>Margin & markup from cost and selling price</strong> - calculates both percentages.</li>
+            <li><strong>Selling price from markup</strong> - finds selling price when you know cost and desired markup.</li>
+            <li><strong>Selling price from margin</strong> - finds selling price when you know cost and desired margin.</li>
+          </ul>
+          <h3>Notes & tips</h3>
+          <ul>
+            <li>Margin is profit ÷ selling price. Markup is profit ÷ cost.</li>
+            <li>Margin % and markup % are not the same (a 50% markup is not a 50% margin).</li>
+            <li>Avoid using 100% margin-selling price would approach infinity because profit would equal selling price.</li>
+          </ul>
+        </section>
+
+        <section class="tool-faq" aria-label="Frequently asked questions">
+    <h2>FAQ</h2>
+    <div class="faq-list">
+    <details class="faq-item">
+    <summary>What’s the difference between margin and markup?</summary>
+    <div class="faq-answer">
+    <p><strong>Margin</strong> = profit ÷ selling price. <strong>Markup</strong> = profit ÷ cost.</p>
+    <p>Example: cost 60, sell 100 → profit 40 → margin 40%, markup 66.67%.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>Why is a 50% markup not a 50% margin?</summary>
+    <div class="faq-answer">
+    <p>Markup is based on cost, margin is based on selling price. If cost is 100 with a 50% markup, selling price is 150. Profit is 50, so margin is 50 ÷ 150 = 33.33%.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>How do I convert a target margin into an equivalent markup?</summary>
+    <div class="faq-answer">
+    <p>Use: <strong>markup% = margin% ÷ (100 − margin%) × 100</strong>.</p>
+    <p>Example: 30% margin → 30 ÷ 70 × 100 ≈ 42.86% markup.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>Can margin be negative?</summary>
+    <div class="faq-answer">
+    <p>Yes. If selling price is below cost, profit is negative, so margin and markup become negative. This can happen with clearance sales or loss leaders.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>Does “cost” include overhead and shipping?</summary>
+    <div class="faq-answer">
+    <p>That’s up to your pricing model. For a realistic margin, your cost should include whatever you consider “true cost” (COGS, packaging, platform fees, shipping subsidies, etc.).</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>How is selling price calculated from margin?</summary>
+    <div class="faq-answer">
+    <p>Selling price = <strong>cost ÷ (1 − margin/100)</strong>.</p>
+    <p>If margin is 100%, the denominator becomes 0, which would imply an infinite price-so it’s not valid.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>Should I include sales tax/VAT in the selling price?</summary>
+    <div class="faq-answer">
+    <p>Usually, margin/markup are calculated on the pre‑tax price (the tax is collected and passed through). If your displayed price is tax‑inclusive, you can remove tax first using the Sales Tax / VAT calculator.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>Why do small price changes matter a lot at high margins?</summary>
+    <div class="faq-answer">
+    <p>When margin is high, the (1 − margin) term is small, so selling price becomes very sensitive. A 1–2% change in desired margin can move price noticeably.</p>
+    </div>
+    </details>
+    </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+            <small>© <span id="year"></span> fastcalculators.app</small>
+            <small><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></small>
+          </div>
+    </div>
+  </footer>
+</div>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

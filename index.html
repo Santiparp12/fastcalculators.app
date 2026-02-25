@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Percentage Calculator</title>
+  <meta name="description" content="Simple percentage calculator." />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" type="image/png" href="assets/Fast_logo.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <!-- OPTIONAL: Paste your AdSense code here after approval -->
+  <!--
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_CLIENT_ID" crossorigin="anonymous"></script>
+  -->
+</head>
+<body>
+
+
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <button class="hamburger" type="button" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="topbar-sep" aria-hidden="true"></div>
+      <a class="topbar-site" href="index.html" aria-label="FastCalculators home"><img class="topbar-logo" src="assets/FastCalculator.png" alt="FastCalculators" /></a>
+    </div>
+
+    <nav class="topbar-right" aria-label="Calculator pages">
+            <div class="topbar-group" role="list">
+<a class="topbar-btn" href="index.html">Percentage</a>
+      <a class="topbar-btn" href="discount.html">Discount</a>
+      <a class="topbar-btn" href="tax.html">Sales Tax / VAT</a>
+      <a class="topbar-btn" href="tip.html">Tip</a>
+      <a class="topbar-btn" href="loan.html">Loan Payment</a>
+      <a class="topbar-btn" href="margin.html">Margin / Markup</a>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="drawer-backdrop" data-drawer-backdrop></div>
+
+<aside class="drawer" id="drawer" aria-label="Site menu" aria-hidden="true">
+  <div class="drawer-head">
+    <div class="drawer-title">Menu</div>
+    <button class="drawer-close" type="button" aria-label="Close menu">✕</button>
+  </div>
+
+  <nav class="drawer-nav" aria-label="Calculators">
+    <a class="drawer-item" href="index.html">Percentage</a>
+    <a class="drawer-item" href="discount.html">Discount</a>
+    <a class="drawer-item" href="tax.html">Sales Tax / VAT</a>
+    <a class="drawer-item" href="tip.html">Tip</a>
+    <a class="drawer-item" href="loan.html">Loan Payment</a>
+    <a class="drawer-item" href="margin.html">Margin / Markup</a>
+  </nav>
+
+  <div class="drawer-foot" aria-label="Legal">
+    <a class="drawer-link" href="privacy.html">Privacy</a>
+    <a class="drawer-link" href="terms.html">Terms</a>
+  </div>
+</aside>
+
+<div class="container">
+  <header>
+    <div class="brand">
+      <div>
+        <h1>Percentage Calculator</h1>
+      </div>
+    </div>
+    <p class="sub">A free online suite of percentage calculators for quick everyday math.</p>
+
+  </header>
+
+  <main class="calc-main">
+    <section class="calc-row" id="calc-of">
+      <form autocomplete="off">
+        <div class="qa">
+          <div class="qline">
+            <span class="qa-tag" aria-hidden="true">Q</span>
+            <span class="dim">What is</span>
+            <input class="num small" inputmode="decimal" placeholder="" data-in aria-label="Percent" />
+            <span class="dim">% of</span>
+            <input class="num medium" inputmode="decimal" placeholder="" data-in aria-label="Number" />
+            <span class="dim">?</span>
+          </div>
+
+          <div class="aline">
+            <span class="qa-tag a" aria-hidden="true">A</span>
+            <span class="dim">Result</span>
+            <input class="out" readonly data-out aria-label="Result" />
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section class="calc-row" id="calc-whatpercent">
+      <form autocomplete="off">
+        <div class="qa">
+          <div class="qline">
+            <span class="qa-tag" aria-hidden="true">Q</span>
+            <input class="num medium" inputmode="decimal" placeholder="" data-in aria-label="X" />
+            <span class="dim">is what percent of</span>
+            <input class="num medium" inputmode="decimal" placeholder="" data-in aria-label="Y" />
+            <span class="dim">?</span>
+          </div>
+
+          <div class="aline">
+            <span class="qa-tag a" aria-hidden="true">A</span>
+            <span class="dim">Result</span>
+            <div class="outwrap">
+              <input class="out" readonly data-out aria-label="Result" />
+              <span class="suffix">%</span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section class="calc-row" id="calc-change">
+      <form autocomplete="off">
+        <div class="qa">
+          <div class="qline">
+            <span class="qa-tag" aria-hidden="true">Q</span>
+            <span class="dim">What is the percent change from</span>
+            <input class="num medium" inputmode="decimal" placeholder="" data-in aria-label="A" />
+            <span class="dim">to</span>
+            <input class="num medium" inputmode="decimal" placeholder="" data-in aria-label="B" />
+            <span class="dim">?</span>
+          </div>
+
+          <div class="aline">
+            <span class="qa-tag a" aria-hidden="true">A</span>
+            <span class="dim">Result</span>
+            <div class="outwrap">
+              <input class="out" readonly data-out aria-label="Result" />
+              <span class="suffix">%</span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section class="calc-row" id="calc-adjust">
+      <form autocomplete="off">
+        <div class="qa">
+          <div class="qline">
+            <span class="qa-tag" aria-hidden="true">Q</span>
+            <span class="dim">If you</span>
+            <select class="sel" data-in aria-label="Increase or decrease">
+              <option value="1">increase</option>
+              <option value="-1">decrease</option>
+            </select>
+            <input class="num medium" inputmode="decimal" placeholder="" data-in aria-label="Base value" />
+            <span class="dim">by</span>
+            <input class="num small" inputmode="decimal" placeholder="" data-in aria-label="Percent" />
+            <span class="dim">%, what do you get?</span>
+          </div>
+
+          <div class="aline">
+            <span class="qa-tag a" aria-hidden="true">A</span>
+            <span class="dim">Result</span>
+            <input class="out" readonly data-out aria-label="Result" />
+          </div>
+        </div>
+      </form>
+    </section>
+</main>
+</div>
+
+<div class="bottom-strip">
+  <div class="container">
+    <section class="tool-info" aria-label="About this calculator">
+          <h2>What is Percentage Calculator?</h2>
+          <p>The Percentage Calculator helps you quickly solve common percentage questions - like finding a percent of a number, converting a ratio to a percent, and measuring percent change.</p>
+          <p>It’s useful for shopping discounts, comparing growth or decline, budgeting, grades, analytics, and any everyday math where “percent” is involved.</p>
+          <h3>What it can calculate</h3>
+          <ul>
+            <li><strong>What is P% of X?</strong> - calculates a percentage of a value.</li>
+            <li><strong>X is what percent of Y?</strong> - converts X/Y into a percentage.</li>
+            <li><strong>Percent change from A to B</strong> - shows how much something increased or decreased.</li>
+            <li><strong>Increase / decrease X by P%</strong> - applies a percent adjustment to a value.</li>
+          </ul>
+          <h3>Notes & tips</h3>
+          <ul>
+            <li>If a result looks too large or small, double‑check that you entered the percent as a number (e.g., 15 for 15%, not 0.15).</li>
+            <li>For percent change, the starting value (A) cannot be 0.</li>
+            <li>Use commas if you want-inputs accept them and calculations still work.</li>
+          </ul>
+        </section>
+
+        <section class="tool-faq" aria-label="Frequently asked questions">
+    <h2>FAQ</h2>
+    <div class="faq-list">
+    <details class="faq-item">
+    <summary>Do I enter 15% as 15 or 0.15?</summary>
+    <div class="faq-answer">
+    <p>Enter <strong>15</strong> for 15%. If you enter <strong>0.15</strong>, the calculator treats it as <strong>0.15%</strong>.</p>
+    <p>If your data is in decimal form (0.15 = 15%), multiply by 100 before entering it.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>How is “X is what percent of Y?” calculated?</summary>
+    <div class="faq-answer">
+    <p>It uses: <strong>(X ÷ Y) × 100</strong>. Example: 25 is what percent of 200? → (25 ÷ 200) × 100 = 12.5%.</p>
+    <p>If <strong>Y = 0</strong>, the result is undefined, so the calculator leaves it blank.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>What’s the difference between percent change and percent difference?</summary>
+    <div class="faq-answer">
+    <p><strong>Percent change</strong> compares a new value to a starting value: (B − A) ÷ A × 100.</p>
+    <p><strong>Percent difference</strong> is a symmetric comparison that uses the average of A and B (often used in science). This tool shows <strong>percent change</strong>.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>Why can’t percent change start from 0?</summary>
+    <div class="faq-answer">
+    <p>Percent change divides by the starting value (A). If A = 0, you’d be dividing by zero, which is undefined.</p>
+    <p>In that case, use an <strong>absolute change</strong> (B − A) or compare against a non‑zero baseline.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>How does “increase / decrease by P%” work?</summary>
+    <div class="faq-answer">
+    <p>Increase uses: <strong>X × (1 + P/100)</strong>. Decrease uses: <strong>X × (1 − P/100)</strong>.</p>
+    <p>Example: decrease 80 by 25% → 80 × 0.75 = 60.</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>Can results be negative?</summary>
+    <div class="faq-answer">
+    <p>Yes. If you enter negative numbers, the math follows standard rules. For example, a change from −50 to −25 is a +50% change (because the value became “less negative”).</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>How does rounding work?</summary>
+    <div class="faq-answer">
+    <p>Results are displayed with a reasonable number of decimals depending on size. For money, you can treat the displayed value as an estimate and round to your currency’s smallest unit (like cents).</p>
+    </div>
+    </details>
+    
+    <details class="faq-item">
+    <summary>How do I convert a fraction or “X out of Y” into a percent?</summary>
+    <div class="faq-answer">
+    <p>Use the “X is what percent of Y?” row. Example: 3 out of 8 → enter X=3, Y=8 → 37.5%.</p>
+    </div>
+    </details>
+    </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+            <small>© <span id="year"></span> fastcalculators.app</small>
+            <small><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></small>
+          </div>
+    </div>
+  </footer>
+</div>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
